@@ -8,6 +8,7 @@
 4.Vue-loader版本为15时，会提示 ``` vue-loader was used without the corresponding plugin```,更新vue-loader版本为vue-loader@^14.2.2后解决 参考：https://github.com/rails/webpacker/issues/1453
 
 
-如何配置添加css前缀
+添加css前缀
 自动生成HTML模板
 编译es6语法
+语法检查

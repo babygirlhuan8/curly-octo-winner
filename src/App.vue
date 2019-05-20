@@ -11,7 +11,7 @@ import child from './components/Child';
 export default {
     name: 'app',
     components: {
-        child: child
+        child
     },
     data: function () {
         return {

@@ -2,10 +2,12 @@
     <div class="child">
         <span class="name">name : {{ name }}</span>
         <span>age: {{ age }}</span>
+        <button @click="print('hi')">点我</button>
     </div>
 </template>
 
 <script>
+import printMe from '../asserts/js/printMe';
 export default {
     props: {
         age: {
@@ -17,7 +19,12 @@ export default {
             required: true
         }
     },
-    name: 'child'
+    name: 'child',
+    methods: {
+        print(msg) {
+            printMe(msg);
+        }
+    }
 }
 </script>
 

@@ -13,22 +13,31 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                use: 'vue-loader'
+                loader: 'vue-loader',
+                options:{
+                    loaders:{
+                        'less':[//lang属性对应的名称
+                            'vue-style-loader',//首先给vue的样式loader过滤一遍
+                            'css-loader',//css-loader,把css转js
+                            'less-loader'//用less编译
+                        ]
+                    }
+                }
             },
             {
                 test: /\.less$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [require('autoprefixer')] // 添加css中的浏览器前缀
-                        }
-                    },
+                    'postcss-loader',
                     'less-loader'
                 ]
-            }
+            },
+            {
+                test: /\.js$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            } // .js文件使用babel-loader，切记排除node_modules目录
         ]
     },
     resolve: {
