@@ -1,7 +1,6 @@
 const path = require('path')
 const root = path.resolve(__dirname, '.') // 项目的根目录绝对路径
-console.log('root:', root);
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   entry: path.join(root, 'src/index.js'),  // 入口文件路径
   output: {
@@ -10,7 +9,24 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.vue$/, use: 'vue-loader' },
+      {
+        test: /\.vue$/,
+        use: 'vue-loader'
+    },
+      {
+        test: /\.less$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [require('autoprefixer')] // 添加css中的浏览器前缀
+              }
+            },
+            'less-loader'
+          ]
+        }
     ]
   },
   resolve: {
