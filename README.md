@@ -7,8 +7,11 @@
 3.在配置了resolve信息后，可直接import Vue from 'vue'，在构建时，会根据配置从node_modules中读取文件
 4.Vue-loader版本为15时，会提示 ``` vue-loader was used without the corresponding plugin```,更新vue-loader版本为vue-loader@^14.2.2后解决 参考：https://github.com/rails/webpacker/issues/1453
 
-
+# 配置记录
+## day1
 添加css前缀
 自动生成HTML模板
 编译es6语法
-语法检查
+
+## day2
+语法检查 + pre-commit钩子
