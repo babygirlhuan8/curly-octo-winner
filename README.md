@@ -14,4 +14,5 @@
 编译es6语法
 
 ## day2
-语法检查 + pre-commit钩子
+添加vue-router
+语法检查 + pre-commit钩子-- 未完成

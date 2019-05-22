@@ -1,13 +1,13 @@
 <template>
-    <div id="app">
-        <router-view class="view"></router-view>
+    <div class="userprofile">
+        用户简介信息
     </div>
 </template>
 
 <script>
 
 export default {
-    name: "app",
+    name: "userprofile",
     data: function() {
         return {
             message: "hello vue!!!"

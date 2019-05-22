@@ -18,8 +18,9 @@
             <button @click="add">加10</button>
         </div>
         <p>
-            <router-link to="/foo">Go to Foo</router-link>
-            <router-link to="/bar">Go to Bar</router-link>
+            <router-link to="/user/test" >Go to User</router-link>
+            <router-link :to="{name: 'user', params: {id: 123}}">go to user2</router-link>
+            <router-link :to="{path: '/home'}">go home</router-link>
         </p>
     </div>
 </template>
@@ -38,6 +39,9 @@ export default {
             type: String,
             required: true
         }
+    },
+    mounted() {
+
     },
     computed: {
         localvar() {
