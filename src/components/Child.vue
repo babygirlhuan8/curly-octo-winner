@@ -17,6 +17,10 @@
             <span>调用action：</span>
             <button @click="add">加10</button>
         </div>
+        <p>
+            <router-link to="/foo">Go to Foo</router-link>
+            <router-link to="/bar">Go to Bar</router-link>
+        </p>
     </div>
 </template>
 
