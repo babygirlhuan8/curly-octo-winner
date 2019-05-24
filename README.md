@@ -16,3 +16,6 @@
 ## day2
 添加vue-router
 语法检查 + pre-commit钩子-- 未完成
+
+# day3
+语法检查 + pre-commit钩子
