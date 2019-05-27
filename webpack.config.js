@@ -1,7 +1,7 @@
-const path = require('path')
-const root = path.resolve(__dirname, '.') // 项目的根目录绝对路径
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const root = path.resolve(__dirname, '.'); // 项目的根目录绝对路径
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.join(root, 'src/index.js'),  // 入口文件路径
@@ -67,4 +67,4 @@ module.exports = {
         template: './index.html',
         hash: true
     })]
-}
+};
